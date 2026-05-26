@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jenifer — Todos Juntos por la FIE</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="icon" href="../imagenes/logo1.png" type="image/png" />
+</head>
+<body>
+
+  <div id="nav-placeholder" data-prefix="../"></div>
+
+  <main>
+    <section class="candidate-hero">
+      <div class="container">
+
+        <a href="../candidatos.html" class="btn-back fade-up">← Volver a Candidatos</a>
+
+        <div class="candidate-hero-inner">
+          <!-- PHOTO -->
+          <div class="candidate-photo-wrap fade-up">
+            <img
+              src="../imagenes/jenifer.png"
+              alt="Jenifer"
+              class="candidate-photo"
+              onerror="this.outerHTML='<div class=\'candidate-photo-placeholder\'>🌺</div>'"
+            />
+            <span class="candidate-badge-role">Consejo de Facultad</span>
+          </div>
+
+          <!-- INFO -->
+          <div class="candidate-info fade-up delay-2" style="position:relative;">
+            <div class="candidate-label-top">Todos Juntos por la FIE · 2025</div>
+            <h1 class="candidate-name">Jenifer</h1>
+            <p class="candidate-tagline">Liderazgo con propósito para transformar nuestra facultad.</p>
+
+            <div class="candidate-stats">
+              <div class="stat-box">
+                <span class="stat-value">FIE</span>
+                <span class="stat-label">Facultad</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-value">2025</span>
+                <span class="stat-label">Elecciones</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-value">10</span>
+                <span class="stat-label">Candidatos</span>
+              </div>
+            </div>
+
+            <div class="candidate-commitments">
+              <h3>Mis Compromisos</h3>
+              <ul class="commitment-list">
+                <li>Impulsar talleres de liderazgo, oratoria y habilidades blandas.</li>
+                <li>Promover la participación cultural y artística de los estudiantes.</li>
+                <li>Gestionar la creación de un elenco musical y cultural en la FIE.</li>
+                <li>Apoyar la reactivación de la radio universitaria.</li>
+                <li>Fortalecer los canales de comunicación entre estudiantes y autoridades.</li>
+                <li>Crear un comité de fiscalización y defensa estudiantil efectivo.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- VALUES STRIP -->
+    <section style="padding:0 2rem 40px;">
+      <div class="container">
+        <div style="
+          display:flex;
+          gap:1rem;
+          justify-content:center;
+          flex-wrap:wrap;
+          padding:24px;
+          background:var(--card-bg);
+          border:1px solid var(--border);
+          border-radius:16px;
+          backdrop-filter:blur(8px);
+        " class="fade-up">
+          <span style="font-size:0.75rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);">✦ Transparencia</span>
+          <span style="color:var(--border);">|</span>
+          <span style="font-size:0.75rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);">✦ Innovación</span>
+          <span style="color:var(--border);">|</span>
+          <span style="font-size:0.75rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);">✦ Honestidad</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- NAV BETWEEN CANDIDATES -->
+    <section style="padding:0 2rem 80px;">
+      <div class="container">
+        <div class="section-title fade-up" style="margin-bottom:24px;">
+          <span class="section-label">También conoce a</span>
+          <h2>Nuestro <span class="accent">Equipo</span></h2>
+        </div>
+        <div style="text-align:center;">
+          <a href="../candidatos.html" style="
+            display:inline-flex;align-items:center;gap:10px;
+            padding:14px 32px;
+            background:linear-gradient(135deg,var(--purple),var(--cyan));
+            color:var(--white);
+            border-radius:50px;
+            font-size:0.88rem;
+            font-weight:700;
+            text-decoration:none;
+            letter-spacing:1px;
+            box-shadow:0 8px 24px rgba(0,207,200,0.3);
+            transition:all 0.3s;
+          " onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 14px 40px rgba(0,207,200,0.4)'"
+             onmouseout="this.style.transform='none';this.style.boxShadow='0 8px 24px rgba(0,207,200,0.3)'">
+            👥 Ver todos los candidatos
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="../js/components.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
