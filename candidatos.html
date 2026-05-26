@@ -7,11 +7,26 @@
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="icon" href="imagenes/logo1.png" type="image/png" />
   
+  <!-- NUEVO: Estilos específicos para agrandar SOLO a los de Consejo y Asamblea -->
   <style>
+    /* 1. Imágenes más grandes solo para Consejo Universitario y Asamblea */
+    .centered-grid .candidate-card-img {
+      width: 300px; /* Aumenta este valor si quieres que sean aún más grandes */
+      height: 420px; /* Mismo valor para mantenerlas cuadradas/proporcionales */
+      object-fit: cover;
+    }
+    
+    /* 2. Permite que la tarjeta (el contenedor) también sea más ancha para que entre la foto */
+    .centered-grid .candidate-card {
+      width: 100%;
+      max-width: 300px; /* Debe ser un poco mayor o igual al width de la imagen */
+    }
+
+    /* 3. Tamaño para el resto de candidatos (Consejo de Facultad) */
     .candidate-card-img {
-      width: 200px; /* Aumenta este valor si las quieres más grandes (ej: 250px) */
-      height: 200px; /* Mantén el mismo valor que el width si son circulares/cuadradas */
-      object-fit: cover; /* Evita que la imagen se deforme al crecer */
+      width: 100%;
+      aspect-ratio: 3/4; /* Respeta el diseño original de tu CSS para la cuadrícula de abajo */
+      object-fit: cover;
     }
   </style>
 </head>
@@ -20,6 +35,7 @@
   <div id="nav-placeholder" data-prefix=""></div>
 
   <main>
+    <!-- HERO -->
     <section class="hero" style="padding:60px 2rem 70px;">
       <div class="hero-shape hero-shape-1"></div>
       <div class="hero-shape hero-shape-2"></div>
@@ -36,19 +52,22 @@
       </div>
     </section>
 
+    <!-- CANDIDATES GRID -->
     <section class="candidates-section">
       <div class="container">
 
+        <!-- CONTENEDOR FLEXBOX: Pone Consejo y Asamblea uno al costado del otro -->
         <div style="display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 64px;">
 
+          <!-- Columna 1: Consejo Universitario -->
           <div style="flex: 1; min-width: 300px;">
             <div class="section-title fade-up" style="margin-bottom:32px;">
               <span class="section-label">Lista</span>
               <h2>Consejo <span class="accent">Universitario</span></h2>
               <div class="section-divider"></div>
             </div>
-            <div class="candidates-grid fade-up delay-1">
-
+            
+            <div class="candidates-grid centered-grid fade-up delay-1">
               <a href="candidatos/blass.html" class="candidate-card">
                 <div class="candidate-card-arrow">→</div>
                 <img src="imagenes/blass.png" alt="Blass" class="candidate-card-img"
@@ -58,18 +77,18 @@
                   <span class="candidate-card-role role-consejo-universitario">Consejo Universitario</span>
                 </div>
               </a>
-
             </div>
           </div>
 
+          <!-- Columna 2: Asamblea Universitaria -->
           <div style="flex: 1; min-width: 300px;">
             <div class="section-title fade-up" style="margin-bottom:32px;">
               <span class="section-label">Lista</span>
               <h2>Asamblea <span class="accent">Universitaria</span></h2>
               <div class="section-divider"></div>
             </div>
-            <div class="candidates-grid fade-up delay-1">
-
+            
+            <div class="candidates-grid centered-grid fade-up delay-1">
               <a href="candidatos/yaquelin.html" class="candidate-card">
                 <div class="candidate-card-arrow">→</div>
                 <img src="imagenes/yaquelin.png" alt="Yaquelin" class="candidate-card-img"
@@ -79,11 +98,14 @@
                   <span class="candidate-card-role role-asamblea-universitaria">Asamblea Universitaria</span>
                 </div>
               </a>
-
             </div>
           </div>
 
         </div> 
+        <!-- FIN DEL CONTENEDOR FLEXBOX -->
+
+
+        <!-- Consejo de Facultad (Se mantiene en cuadrícula normal) -->
         <div class="section-title fade-up" style="margin-bottom:32px;">
           <span class="section-label">Lista</span>
           <h2>Consejo de <span class="accent">Facultad</span></h2>

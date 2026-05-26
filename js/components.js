@@ -47,7 +47,7 @@ function getFooterHTML(prefix = '') {
         <span class="footer-value">✦ Honestidad</span>
       </div>
       <div class="footer-copy">
-        ¡Juntos construimos la mejor <span>FIE</span>! &nbsp;·&nbsp; Todos Juntos por la FIE © 2025
+        ¡Juntos construimos la mejor <span>FIE</span>! &nbsp;·&nbsp; Todos Juntos por la FIE © 2026
       </div>
     </div>
   </footer>`;

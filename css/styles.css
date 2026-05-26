@@ -498,3 +498,72 @@ footer { border-top: 1px solid var(--border); padding: 44px 2rem 28px; position:
   .proposals-grid { grid-template-columns: 1fr; }
   .modal-inner { padding: 22px 20px 24px; }
 }
+
+/* ============================================
+   VENTANA FLOTANTE PUBLICITARIA (ESQUINA INFERIOR DERECHA)
+   ============================================ */
+.floating-ad-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999; /* Se asegura de estar por encima de todo */
+  max-width: 180px; /* Puedes cambiar este tamaño si quieres que sea más grande o pequeña */
+  width: 100%;
+  background: rgba(16, 8, 48, 0.9);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 6px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  animation: slideInUp 0.5s ease-out both;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.floating-ad-container:hover {
+  transform: translateY(-5px);
+  border-color: var(--cyan);
+}
+
+.floating-ad-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Botón pequeño para cerrar la publicidad */
+.floating-ad-close {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 24px;
+  height: 24px;
+  background: var(--dark);
+  border: 1px solid var(--cyan);
+  color: var(--white);
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+.floating-ad-close:hover {
+  background: var(--cyan);
+  color: var(--dark);
+  transform: scale(1.1);
+}
+
+/* Animación de entrada */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
