@@ -6,13 +6,20 @@
   <title>Candidatos — Todos Juntos por la FIE</title>
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="icon" href="imagenes/logo1.png" type="image/png" />
+  
+  <style>
+    .candidate-card-img {
+      width: 200px; /* Aumenta este valor si las quieres más grandes (ej: 250px) */
+      height: 200px; /* Mantén el mismo valor que el width si son circulares/cuadradas */
+      object-fit: cover; /* Evita que la imagen se deforme al crecer */
+    }
+  </style>
 </head>
 <body>
 
   <div id="nav-placeholder" data-prefix=""></div>
 
   <main>
-    <!-- HERO -->
     <section class="hero" style="padding:60px 2rem 70px;">
       <div class="hero-shape hero-shape-1"></div>
       <div class="hero-shape hero-shape-2"></div>
@@ -29,71 +36,54 @@
       </div>
     </section>
 
-    <!-- CANDIDATES GRID -->
     <section class="candidates-section">
       <div class="container">
 
-        <!-- Consejo Universitario -->
-        <div class="section-title fade-up" style="margin-bottom:32px;">
-          <span class="section-label">Lista</span>
-          <h2>Consejo <span class="accent">Universitario</span></h2>
-          <div class="section-divider"></div>
-        </div>
-        <div class="candidates-grid fade-up delay-1" style="margin-bottom:64px;">
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 64px;">
 
-          <a href="candidatos/blass.html" class="candidate-card">
-            <div class="candidate-card-arrow">→</div>
-            <img src="imagenes/blass.png" alt="Blass" class="candidate-card-img"
-                 onerror="this.outerHTML='<div class=\'candidate-card-img-placeholder\'>🎓</div>'" />
-            <div class="candidate-card-info">
-              <div class="candidate-card-name">Blass</div>
-              <span class="candidate-card-role role-consejo-universitario">Consejo Universitario</span>
+          <div style="flex: 1; min-width: 300px;">
+            <div class="section-title fade-up" style="margin-bottom:32px;">
+              <span class="section-label">Lista</span>
+              <h2>Consejo <span class="accent">Universitario</span></h2>
+              <div class="section-divider"></div>
             </div>
-          </a>
+            <div class="candidates-grid fade-up delay-1">
 
-          <a href="candidatos/denis.html" class="candidate-card">
-            <div class="candidate-card-arrow">→</div>
-            <img src="imagenes/denis.png" alt="Denis" class="candidate-card-img"
-                 onerror="this.outerHTML='<div class=\'candidate-card-img-placeholder\'>🎓</div>'" />
-            <div class="candidate-card-info">
-              <div class="candidate-card-name">Denis</div>
-              <span class="candidate-card-role role-consejo-universitario">Consejo Universitario</span>
+              <a href="candidatos/blass.html" class="candidate-card">
+                <div class="candidate-card-arrow">→</div>
+                <img src="imagenes/blass.png" alt="Blass" class="candidate-card-img"
+                     onerror="this.outerHTML='<div class=\'candidate-card-img-placeholder\'>🎓</div>'" />
+                <div class="candidate-card-info">
+                  <div class="candidate-card-name">Blass</div>
+                  <span class="candidate-card-role role-consejo-universitario">Consejo Universitario</span>
+                </div>
+              </a>
+
             </div>
-          </a>
+          </div>
 
-        </div>
-
-        <!-- Asamblea Universitaria -->
-        <div class="section-title fade-up" style="margin-bottom:32px;">
-          <span class="section-label">Lista</span>
-          <h2>Asamblea <span class="accent">Universitaria</span></h2>
-          <div class="section-divider"></div>
-        </div>
-        <div class="candidates-grid fade-up delay-1" style="margin-bottom:64px;">
-
-          <a href="candidatos/yaquelin.html" class="candidate-card">
-            <div class="candidate-card-arrow">→</div>
-            <img src="imagenes/yaquelin.png" alt="Yaquelin" class="candidate-card-img"
-                 onerror="this.outerHTML='<div class=\'candidate-card-img-placeholder\'>🎓</div>'" />
-            <div class="candidate-card-info">
-              <div class="candidate-card-name">Yaquelin</div>
-              <span class="candidate-card-role role-asamblea-universitaria">Asamblea Universitaria</span>
+          <div style="flex: 1; min-width: 300px;">
+            <div class="section-title fade-up" style="margin-bottom:32px;">
+              <span class="section-label">Lista</span>
+              <h2>Asamblea <span class="accent">Universitaria</span></h2>
+              <div class="section-divider"></div>
             </div>
-          </a>
+            <div class="candidates-grid fade-up delay-1">
 
-          <a href="candidatos/jose.html" class="candidate-card">
-            <div class="candidate-card-arrow">→</div>
-            <img src="imagenes/jose.png" alt="Jose" class="candidate-card-img"
-                 onerror="this.outerHTML='<div class=\'candidate-card-img-placeholder\'>🎓</div>'" />
-            <div class="candidate-card-info">
-              <div class="candidate-card-name">Jose</div>
-              <span class="candidate-card-role role-asamblea-universitaria">Asamblea Universitaria</span>
+              <a href="candidatos/yaquelin.html" class="candidate-card">
+                <div class="candidate-card-arrow">→</div>
+                <img src="imagenes/yaquelin.png" alt="Yaquelin" class="candidate-card-img"
+                     onerror="this.outerHTML='<div class=\'candidate-card-img-placeholder\'>🎓</div>'" />
+                <div class="candidate-card-info">
+                  <div class="candidate-card-name">Yaquelin</div>
+                  <span class="candidate-card-role role-asamblea-universitaria">Asamblea Universitaria</span>
+                </div>
+              </a>
+
             </div>
-          </a>
+          </div>
 
-        </div>
-
-        <!-- Consejo de Facultad -->
+        </div> 
         <div class="section-title fade-up" style="margin-bottom:32px;">
           <span class="section-label">Lista</span>
           <h2>Consejo de <span class="accent">Facultad</span></h2>
@@ -157,6 +147,26 @@
                  onerror="this.outerHTML='<div class=\'candidate-card-img-placeholder\'>🎓</div>'" />
             <div class="candidate-card-info">
               <div class="candidate-card-name">Aly</div>
+              <span class="candidate-card-role role-consejo-facultad">Consejo de Facultad</span>
+            </div>
+          </a>
+
+          <a href="candidatos/denis.html" class="candidate-card">
+            <div class="candidate-card-arrow">→</div>
+            <img src="imagenes/denis.png" alt="Denis" class="candidate-card-img"
+                 onerror="this.outerHTML='<div class=\'candidate-card-img-placeholder\'>🎓</div>'" />
+            <div class="candidate-card-info">
+              <div class="candidate-card-name">Denis</div>
+              <span class="candidate-card-role role-consejo-facultad">Consejo de Facultad</span>
+            </div>
+          </a>
+
+          <a href="candidatos/jose.html" class="candidate-card">
+            <div class="candidate-card-arrow">→</div>
+            <img src="imagenes/jose.png" alt="Jose" class="candidate-card-img"
+                 onerror="this.outerHTML='<div class=\'candidate-card-img-placeholder\'>🎓</div>'" />
+            <div class="candidate-card-info">
+              <div class="candidate-card-name">Jose</div>
               <span class="candidate-card-role role-consejo-facultad">Consejo de Facultad</span>
             </div>
           </a>
